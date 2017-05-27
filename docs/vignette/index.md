@@ -4,7 +4,7 @@ title: Vignette power!!
 ---
 
 <div id="sidebar">
-hello
+<a href="part1.html">hello</a>
 </div>
 
 Landing page ...
