@@ -3,7 +3,7 @@ layout: docs
 title: Vignette power!!
 ---
 
-<div class="sidebar">
+<div id="sidebar">
 hello
 </div>
 
