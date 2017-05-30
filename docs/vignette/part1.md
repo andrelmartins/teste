@@ -1,3 +1,14 @@
+---
+layout: docs
+title: Processing of DNase-seq data from ENCODE
+---
+
+<div id="sidebar">
+<a href="#">Processing of DNase-seq data from ENCODE</a>
+<a href="part2.html">Processing of DNase-seq data from ENCODE</a>
+</div>
+
+
 # Processing of DNase-seq data from ENCODE
 
 Enzymatic digestion sequence preference was characterized on the genome-wide scale in a joint publication
