@@ -5,7 +5,7 @@ title: Processing of DNase-seq data from ENCODE
 
 <div id="sidebar">
 <a href="#">Processing of DNase-seq data from ENCODE</a>
-<a href="part2.html">`seqOutBias` to generate scaled bigWig files</a>
+<a href="part2.html"><code>seqOutBias</code> to generate scaled bigWig files</a>
 </div>
 
 # `seqOutBias` to generate scaled bigWig files
@@ -68,7 +68,7 @@ bam=IMR90_Naked_DNase.bam
 
 ## Visualizing the single-nucleotide cut files in UCSC
 
-Convert the bigWig files to bedGraph and add a header to the files for loading into the UCSC genome browser. First use the UCSC tool [bigWigToBedGrap](http://hgdownload.cse.ucsc.edu/admin/exe/) to convert the bigWig files to bedGraph files, then add a header to the files, and compress.
+Convert the *bigWig* files to *bedGraph* and add a header to the files for loading into the UCSC genome browser. First use the UCSC tool [`bigWigToBedGrap`](http://hgdownload.cse.ucsc.edu/admin/exe/) to convert the *bigWig* files to *bedGraph* files, then add a header to the files, and compress.
 
 ```bash
 for wig in *bigWig
@@ -89,7 +89,7 @@ mv Naked*bigWig Naked
 mv MCF7*bigWig MCF7
 ```
 
-Use the [UCSC browser](https://genome.ucsc.edu) to visualize the normalized and unnormalized files (Karolchik *et al.*, 2014). Click Genomes in the upper left corner (Figure 3). Make sure you have the correct assembly, we are using *hg38*. Next click add custom tracks (Figure 4). Use the GUI to navigate to the **.bedGraph.gz* file-containing directory and upload each file individually. You will want to register and save sessions and you will only need to upload the data once.
+Use the [UCSC browser](https://genome.ucsc.edu) to visualize the normalized and unnormalized files (Karolchik *et al.*, 2014). Click *Genomes* in the upper left corner (Figure 3). Make sure you have the correct assembly, we are using *hg38*. Next click *add custom tracks* (Figure 4). Use the GUI to navigate to the **.bedGraph.gz* file-containing directory and upload each file individually. You will want to register and save sessions and you will only need to upload the data once.
 
 <img src="{{site.url}}/{{site.baseurl}}/assets/images/UCSC_Genome_Browser_Home.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal03').style.display='block'">
 
@@ -111,7 +111,7 @@ Use the [UCSC browser](https://genome.ucsc.edu) to visualize the normalized and 
     <div class="w3-modal-content w3-animate-zoom">
       <img src="{{site.url}}/{{site.baseurl}}/assets/images/Human-browser_export.jpg" style="width:100%">
       <div class="w3-modal-caption">
-        Figure 4: Below the browser, click the add custom tracks icon.
+        Figure 4: Below the browser, click the **add custom tracks** icon.
       </div>
     </div>
 </div>
@@ -153,7 +153,7 @@ scale.table[scale.table[,2] == 'GGGGAA',]
 
 ## Retrieving ChIP-seq binding and sequence motif data
 
-To look at composite footprints that result from transcription factor binding to DNA in the context of chromatin, we need to first find all the regions bound by the factor. We get these from processed ENCODE data; we could merge or intersect the replicate files using software like `bedtools` (Quinlan and Hall, 2010), but for the purposes of this vignette we will keep it simple and look at the first replicate *broadPeak* file for three factors. We need to convert these files from hg19 to hg38 coordinates using UCSC [liftOver]( http://hgdownload.cse.ucsc.edu/admin/exe/) and retrieve the sequence associated with each genome coordinate using fastaFromBed from bedtools (Quinlan and Hall, 2010). Note that we use MAST (Bailey *et al.*, 2009) to identify TF binding sites within ChIP-seq peaks to infer the site of TF binding precisely using traditional DNase-seq data. However, since the naked DNA DNase-seq is
+To look at composite footprints that result from transcription factor binding to DNA in the context of chromatin, we need to first find all the regions bound by the factor. We get these from processed ENCODE data; we could merge or intersect the replicate files using software like `bedtools` (Quinlan and Hall, 2010), but for the purposes of this vignette we will keep it simple and look at the first replicate *broadPeak* file for three factors. We need to convert these files from hg19 to hg38 coordinates using UCSC [`liftOver`]( http://hgdownload.cse.ucsc.edu/admin/exe/) and retrieve the sequence associated with each genome coordinate using fastaFromBed from bedtools (Quinlan and Hall, 2010). Note that we use MAST (Bailey *et al.*, 2009) to identify TF binding sites within ChIP-seq peaks to infer the site of TF binding precisely using traditional DNase-seq data. However, since the naked DNA DNase-seq is
 lower coverage and the DNA was stripped of proteins, we use FIMO (Grant *et al.*, 2011) to identify all
 potential TF binding sites in the genome for our composite profiles.
 
@@ -202,7 +202,7 @@ done
 ```
 
 Use R to plot composite DNase profiles at TF binding sites
-First you need to install the bigWig library from André Martins (https://github.com/andrelmartins/ bigWig). The lattice and latticeExtra libraries can be installed from the CRAN repository. Recall we process the Naked DNA DNase-seq and conventional DNase-seq separately and the input motifs are distinct for each.
+First you need to install the [bigWig library](https://github.com/andrelmartins/bigWig) from André Martins. The lattice and latticeExtra libraries can be installed from the CRAN repository. Recall we process the Naked DNA DNase-seq and conventional DNase-seq separately and the input motifs are distinct for each.
 
 ```r
 source('https://raw.githubusercontent.com/guertinlab/seqOutBias/master/docs/R/seqOutBias_functions.R')
