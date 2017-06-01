@@ -79,9 +79,9 @@ variable ’name’ is assigned to the first string.
 ```bash
 for fq in *.fastq.gz
 do
-name=$(echo $fq | awk -F".fastq.gz" '{print $1}')
-echo $name
-bowtie2 -x hg38 -U $fq -S $name.sam
+    name=$(echo $fq | awk -F".fastq.gz" '{print $1}')
+    echo $name
+    bowtie2 -x hg38 -U $fq -S $name.sam
 done
 ```
 
@@ -94,9 +94,9 @@ herein) (Li *et al.*, 2009).
 ```bash
 for sam in *.sam
 do
-name=$(echo $sam | awk -F".sam" '{print $1}')
-echo $name
-samtools view -b $sam | samtools sort - $name
+    name=$(echo $sam | awk -F".sam" '{print $1}')
+    echo $name
+    samtools view -b $sam | samtools sort - $name
 done
 rm *sam
 ```
