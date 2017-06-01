@@ -20,7 +20,7 @@ size, strand-specific offsets, and spaced k-mers.
 The specificity of DNase is strongly influenced by the three bases that flank each side of the DNase cut
 site (Figure 1) (He *et al.*, 2014; Yardımcı *et al.*, 2014).
 
-<img src="assets/images/DNase_cut_preference.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal01').style.display='block'">
+<img src="{{site.url}}/assets/images/DNase_cut_preference.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal01').style.display='block'">
 
   <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
