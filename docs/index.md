@@ -19,4 +19,4 @@ reuses intermediate results as much as possible.
 # Documentation
 
 - [User guide](https://guertinlab.github.io/seqOutBias/seqOutBias_user_guide.pdf)
-- [Vignette](https://guertinlab.github.io/seqOutBias/seqOutBias_vignette.pdf) (online [version](https://andrelmartins.github.io/teste/vignette))
+- [Vignette](https://guertinlab.github.io/seqOutBias/seqOutBias_vignette.pdf) (online [version]({{ site.url }}/vignette))
