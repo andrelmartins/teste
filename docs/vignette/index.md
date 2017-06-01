@@ -1,14 +1,16 @@
 ---
 layout: docs
-title: Vignette power!!
+title: seqOutBias vignette
 ---
 
-<div id="sidebar">
-<a href="part1.html">Processing of DNase-seq data from ENCODE</a>
-<a href="part2.html">seqOutBias to generate scaled bigWig files</a>
-</div>
-
 A step-by-step guide to correcting sequence biases resulting from enzymatic sequence preferences
-using seqOutBias.
+using `seqOutBias`.
 
-Landing page ...
+Contents:
+
+1. [Processing of DNase-seq data from ENCODE](part1.html)
+2. [`seqOutBias` to generate scaled bigWig files](part2.html)
+3. [Correction of Tn5 sequence bias from ATAC-seq data](part3.html)
+4. [Correction of MNase sequence bias from MNase-seq data](part4.html)
+5. [Scaling Tissue Accessible Chromatin (TACh) Benzonase and Cyanase Digested DNA](part5.html)
+6. [PRO-seq T4 RNA ligase correction and analysis](part6.html)

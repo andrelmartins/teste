@@ -1,12 +1,7 @@
 ---
 layout: docs
-title: Processing of DNase-seq data from ENCODE
+title: seqOutBias to generate scaled bigWig files
 ---
-
-<div id="sidebar">
-<a href="#">Processing of DNase-seq data from ENCODE</a>
-<a href="part2.html"><code>seqOutBias</code> to generate scaled bigWig files</a>
-</div>
 
 # `seqOutBias` to generate scaled bigWig files
 
