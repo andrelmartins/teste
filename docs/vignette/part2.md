@@ -25,13 +25,12 @@ site (Figure 1) (He *et al.*, 2014; Yardımcı *et al.*, 2014).
   <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
-      <img src="img_fjords.jpg" style="width:100%">
+      <img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase_cut_preference.jpg" style="width:100%">
+      <div class="w3-modal-caption">Figure 1: The six base pair window centered on the DNase nick dictates cleavage preference. (He *et al.*,
+2014)</div>
     </div>
   </div>
 
-ACGGGATATGATGACCAGATGACA
-TGCCCTATACTACTGGTCTACTGT
-DNase nicking
 Figure 1: The six base pair window centered on the DNase nick dictates cleavage preference. (He *et al.*,
 2014)
 
