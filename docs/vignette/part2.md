@@ -55,12 +55,12 @@ bam=IMR90_Naked_DNase.bam
 ```
 
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/cut-site-definition.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal02').style.display='block'">
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/cut_site_definition.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal02').style.display='block'">
 
   <div id="modal02" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
-      <img src="{{site.url}}/{{site.baseurl}}/assets/images/cut-site-definition.jpg" style="width:100%">
+      <img src="{{site.url}}/{{site.baseurl}}/assets/images/cut_site_definition.jpg" style="width:100%">
       <div class="w3-modal-caption">Figure 2: DNase nicking occurs as marked between the two centered base pairs. DNase’s specificity is conferred by the hexamer sequence centered (red block) on the nick sites (dotted vertical lines); this parameter is referred to as the <code>k-mer</code>. For the purposes of this illustration, the two nicks that result in liberation of the DNA ends are in line. We explore the scenarios where the nicks are offset and result in overhangs in Section 8. The <code>plus-offset</code> and <code>minus-offset</code> specify the nick site relative to the first position and last position of the <code>k-mer</code>. During the library preparation, we assume that the plus and minus strand are equally likely to be sequenced (either red nucleotide will be the first base sequenced). This assumption, however, is not true and the DNA end-repair and ligation have inherent biases. As opposed to specifying the immediate upstream base for the minus strand, we arbitrarily shift the base position by +1 to match the position of the immediate upstream base from the plus aligned read; note that the actual shift amounts will differ depending on the relative positions dictated by the plus/minus-offset values.</div>
     </div>
   </div>
@@ -104,9 +104,31 @@ Use the [UCSC browser](https://genome.ucsc.edu) to visualize the normalized and 
 </div>
 
 
-Figure 4: Below the browser, click the add custom tracks icon.
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/Human-browser_export.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal04').style.display='block'">
 
-Figure 5: Note that each bar is scaled inversely with DNase sequence preference.
+<div id="modal04" class="w3-modal" onclick="this.style.display='none'">
+    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom">
+      <img src="{{site.url}}/{{site.baseurl}}/assets/images/Human-browser_export.jpg" style="width:100%">
+      <div class="w3-modal-caption">
+        Figure 4: Below the browser, click the add custom tracks icon.
+      </div>
+    </div>
+</div>
+
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/ucsc_snr_DNase.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal04').style.display='block'">
+
+<div id="modal04" class="w3-modal" onclick="this.style.display='none'">
+    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom">
+      <img src="{{site.url}}/{{site.baseurl}}/assets/images/ucsc_snr_DNase.jpg" style="width:100%">
+      <div class="w3-modal-caption">
+        Figure 5: Note that each bar is scaled inversely with DNase sequence preference.
+      </div>
+    </div>
+</div>
+
+
 
 ## Generating and analyzing k-mer count tables
 
