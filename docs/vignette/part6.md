@@ -253,4 +253,116 @@ save(minus.exon.pro, plus.exon.pro, plus.exon.aag.pro, plus.exon.cag.pro, plus.e
 load('~/Core_PRO/exon.pro.Rdata')
 ```
 
-...
+
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_RNA_Polymerase_signals_Exon_Raw_exon.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal08').style.display='block'">
+
+<div id="modal08" class="w3-modal" onclick="this.style.display='none'">
+    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom">
+        <img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_RNA_Polymerase_signals_Exon_Raw_exon.jpg" style="width:100%">
+        <div class="w3-modal-caption">Figure 8: We observe a sharp skipe in position -3 only at CAG 3’ splice sites. This indicates that cytosine is preferentially incorporated during the run-on or preferentially ligated.
+        </div>
+    </div>
+</div>
+
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_RNA_Polymerase_signals_Exon_Raw_exon.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal08').style.display='block'">
+
+<div id="modal08" class="w3-modal" onclick="this.style.display='none'">
+    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom">
+        <img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_RNA_Polymerase_signals_Exon_Raw_exon.jpg" style="width:100%">
+        <div class="w3-modal-caption">Figure 8: We observe a sharp skipe in position -3 only at CAG 3’ splice sites. This indicates that cytosine is preferentially incorporated during the run-on or preferentially ligated.
+        </div>
+    </div>
+</div>
+
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_RNA_Polymerase_signals_Exon_Corrected_exon.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal09').style.display='block'">
+<div id="modal09" class="w3-modal" onclick="this.style.display='none'">
+    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom">
+        <img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_RNA_Polymerase_signals_Exon_Corrected_exon.jpg" style="width:100%">
+        <div class="w3-modal-caption">
+            Figure 9: We examined the composite profiles at corrected CAG and TAG splice acceptor sites and we observe that RNA polymerase density is higher following CAG splice acceptor sites, which indicates that the Polymerase proceeds into teh exon more slowly following a CAG splice acceptor site.
+        </div>
+    </div>
+</div>
+
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/seqOutBias_Figure6.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal10').style.display='block'">
+<div id="modal10" class="w3-modal" onclick="this.style.display='none'">
+    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom">
+        <img src="{{site.url}}/{{site.baseurl}}/assets/images/seqOutBias_Figure6.jpg" style="width:100%">
+        <div class="w3-modal-caption">
+            Figure 10: Upon correcting for enzymatic sequence bias, the signature at the 3’ splice site is abrogated. The first base of the exon spans position 0-1 on the x-axis. The position -3 upstream from the exon start results from T4 RNA ligase sequence bias and this sequence bias is corrected by <code>seqOutBias</code>.
+        </div>
+    </div>
+</div>
+
+## Plotting `seqOutBias` correction of DNase, MNase, ATAC, TACh, and PRO-seq data at CTCF binding sites.
+
+The only factor with ChIP-seq data in MCF7, GM12878, K562, and mouse liver is CTCF. `SeqOutBias` corrects the sequence bias for CTCF reasonably well. Although, the Tn5 bias seems to span a wide domain and a k-mer correction is likely not optimal, as sequence features that span this domain likely influence Tn5 recognition.
+
+```r
+source('https://raw.githubusercontent.com/guertinlab/seqOutBias/master/docs/R/seqOutBias_functions.R')
+
+load('~/DNase_ENCODE/MCF7_composites.Rdata')
+load('~/TACh_Grontved/MOUSE_composites.Rdata')
+load('~/MNase_Zhang/all.composites.mnase.mcf7.Rdata') 
+load('~/ATAC_Walavalkar/ATAC_naked_composites.Rdata') 
+load('~/Core_PRO/PRO_composites.Rdata')
+
+#Comparing correction of sequence bias dictated by the CTCF motif
+#all.composites.ATAC$grp = gsub("CTCF_GM12878", "CTCF", all.composites.ATAC$grp)
+
+all.composites.ATAC$cond = gsub("ATAC_GM12878_no_scale_merged", "ATACgm_0-mer", all.composites.ATAC$cond)
+all.composites.ATAC$cond = gsub("ATAC_GM12878_NXNXXXCXXNNXNNNXXN_NXXNNNXNNXXCXXXNXN_merged", "ATACgm_NXNXXXCXXNNXNNNXXN-mer",
+    all.composites.ATAC$cond)
+
+all.composites.ATAC.naked$cond = gsub("C1_gDNA_no_scale_merged", "ATACnk_0-mer", all.composites.ATAC.naked$cond) 
+all.composites.ATAC.naked$cond = gsub("C1_gDNA_NXNXXXCXXNNXNNNXXN_NXXNNNXNNXXCXXXNXN_merged", "ATACnk_NXNXXXCXXNNXNNNXXN-mer",
+    all.composites.ATAC.naked$cond)
+
+all.composites.plus.pro$cond = gsub("PRO_plus_body_0-mer", "PRO_0-mer", all.composites.plus.pro$cond)
+all.composites.plus.pro$cond = gsub("PRO_plus_body_NNNCNNN-mer", "PRO_6-mer", all.composites.plus.pro$cond)
+
+alldf = rbind(all.composites.cyanase, all.composites.benzonase, all.composites.dnase.mcf7, all.composites.dnase.naked, all.composites.ATAC, all.composites.ATAC.naked, all.composites.mnase.mcf7, all.composites.plus.pro)
+#colnames(alldf) = c('est', 'x', 'grp', 'upper', 'lower', 'cond')
+ctcf.df = alldf[alldf$grp == 'CTCF',]
+ctcf.df = ctcf.df[ctcf.df$cond == 'Cyanase_0-mer' | ctcf.df$cond == 'Cyanase_10-mer' | ctcf.df$cond == 'Benzonase_0-mer' |
+ctcf.df$cond == 'Benzonase_10-mer' | ctcf.df$cond == 'MCF7_0-mer' | ctcf.df$cond == 'MCF7_6-mer' | ctcf.df$cond == 'Naked_0-mer' | ctcf.df$cond == 'Naked_6-mer' | ctcf.df$cond == 'ATACgm_0-mer' |
+ctcf.df$cond == 'ATACgm_NXNXXXCXXNNXNNNXXN-mer' | ctcf.df$cond == 'ATACnk_0-mer' | ctcf.df$cond == 'ATACnk_NXNXXXCXXNNXNNNXXN-mer' | ctcf.df$cond == 'MNase_0-mer' |
+ctcf.df$cond == 'MNase_8-mer' | ctcf.df$cond == 'PRO_0-mer' | ctcf.df$cond == 'PRO_6-mer',]
+ctcf.df$grp = sapply(strsplit(as.character(ctcf.df$cond),'_'), "[", 1)
+ctcf.df$cond = sapply(strsplit(as.character(ctcf.df$cond),'_'), "[", 2)
+
+ctcf.df[ctcf.df=="ATACgm"] = 'ATAC Chromatin'
+ctcf.df[ctcf.df=="MCF7"] = 'DNase Chromatin'
+#ctcf.df[ctcf.df=="MNase"] = 'DNase Chromatin'
+
+ctcf.df[ctcf.df=="Naked"] = 'DNase Naked DNA'
+ctcf.df[ctcf.df=="ATACnk"] = 'ATAC Naked DNA'
+ctcf.df[ctcf.df=="ATACnk"] = 'ATAC Naked DNA'
+ctcf.df[ctcf.df=="PRO"] = 'Precision Run-On'
+
+ctcf.df[ctcf.df=='0-mer'] = 'raw'
+ctcf.df[ctcf.df=="10-mer"] = 'corrected'
+ctcf.df[ctcf.df=="6-mer"] = 'corrected'
+ctcf.df[ctcf.df=="8-mer"] = 'corrected'
+ctcf.df[ctcf.df=="NNNXXNCNN-mer"] = 'corrected'
+
+
+composites.func(ctcf.df, fact= "Experimental", summit= "CTCF motif",num = 24,
+    col.lines = rev(c(rgb(0,0,1,1/2), rgb(0,0,0,1/2))),
+    fill.poly = rev(c(rgb(0,0,1,1/4), rgb(0,0,0,1/4))))
+```
+
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_Experimental_signals_CTCF_motif_peaks.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal11').style.display='block'">
+<div id="modal11" class="w3-modal" onclick="this.style.display='none'">
+    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom">
+        <img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_Experimental_signals_CTCF_motif_peaks.jpg" style="width:100%">
+        <div class="w3-modal-caption">
+            Figure 11: Upon correcting for enzymatic sequence bias, the signature at the site of CTCF binding is abrogated in each molecular genomics data set we tested. However, in cases of CTCF binding to chromatin, we observe protection that results in a footprint; note that MNase is not expected to result in a composite footprint. We observe the previously characterized sharp peak upstream of the CTCF motif; this signature is likely caused by CTCF-mediated enhancement of cleavage activity. This upstream peak signature and the ATAC footprint is less pronounced than previously reported (Buenrostro <em>et al.</em>, 2013).
+        </div>
+    </div>
+</div>
