@@ -14,3 +14,4 @@ Contents:
 4. [Correction of MNase sequence bias from MNase-seq data](part4.html)
 5. [Scaling Tissue Accessible Chromatin (TACh) Benzonase and Cyanase Digested DNA](part5.html)
 6. [PRO-seq T4 RNA ligase correction and analysis](part6.html)
+7. [k-mer mask optimization](part7.html)

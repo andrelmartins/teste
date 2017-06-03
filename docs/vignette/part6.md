@@ -253,18 +253,6 @@ save(minus.exon.pro, plus.exon.pro, plus.exon.aag.pro, plus.exon.cag.pro, plus.e
 load('~/Core_PRO/exon.pro.Rdata')
 ```
 
-
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_RNA_Polymerase_signals_Exon_Raw_exon.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal08').style.display='block'">
-
-<div id="modal08" class="w3-modal" onclick="this.style.display='none'">
-    <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
-    <div class="w3-modal-content w3-animate-zoom">
-        <img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_RNA_Polymerase_signals_Exon_Raw_exon.jpg" style="width:100%">
-        <div class="w3-modal-caption">Figure 8: We observe a sharp skipe in position -3 only at CAG 3’ splice sites. This indicates that cytosine is preferentially incorporated during the run-on or preferentially ligated.
-        </div>
-    </div>
-</div>
-
 <img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_RNA_Polymerase_signals_Exon_Raw_exon.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal08').style.display='block'">
 
 <div id="modal08" class="w3-modal" onclick="this.style.display='none'">
