@@ -43,7 +43,7 @@ mv MNase_8-mer.bigWig MNase_final
 ```
 
 ## Plotting MNase-seq composites using `R`
-Plot the composite MNase profile using the MCF7 ChIP-seq peaks from Section 2.4. These MNase- seq data are relatively low coverage and MNase-seq reads are not enriched at TF binding sites, as in DNase-seq. Therefore, the sequence bias correction is more apparent when you average over all the motif instances in the genome that we identified by FIMO in Section 2.4.
+Plot the composite MNase profile using the MCF7 ChIP-seq peaks from Section 2.4. These MNase-seq data are relatively low coverage and MNase-seq reads are not enriched at TF binding sites, as in DNase-seq. Therefore, the sequence bias correction is more apparent when you average over all the motif instances in the genome that we identified by FIMO in Section 2.4.
 
 ```r
 source('https://raw.githubusercontent.com/guertinlab/seqOutBias/master/docs/R/seqOutBias_functions.R')

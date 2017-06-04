@@ -106,7 +106,7 @@ mv *plus*bigWig plus
 
 ## Plotting PRO-seq density surrounding TF binding sites
 
-Next we will look at PRO-seq signal centered around CTCF binding sites. We will consider the orien- tation of the CTCF motif and the original alignment strand of the sequence read.
+Next we will look at PRO-seq signal centered around CTCF binding sites. We will consider the orientation of the CTCF motif and the original alignment strand of the sequence read.
 
 ```bash
 wget http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeUwTfbs/wgEncodeUwTfbsK562CtcfStdPkRep1.narrowPeak.gz
