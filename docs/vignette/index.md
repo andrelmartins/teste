@@ -16,3 +16,4 @@ Contents:
 6. [PRO-seq T4 RNA ligase correction and analysis](part6.html)
 7. [k-mer mask optimization](part7.html)
 8. [Characterizing the enzymatic clean up and ligation sequence bias](part8.html)
+9. [References](refs.html)
