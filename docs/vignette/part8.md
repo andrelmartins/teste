@@ -112,7 +112,7 @@ pswm.func(head(x.ligation[,2], 205), out = 'low_205.txt', positions = 6) pswm.fu
     </div>
 </div>
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/avg_ligation_bias.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal17').style.display='block'">
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/avg_ligation_bias.jpg" style="min-width:100%;min-height:auto;cursor:zoom-in" onclick="document.getElementById('modal17').style.display='block'">
 <div id="modal17" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
