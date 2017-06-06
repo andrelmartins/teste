@@ -253,7 +253,12 @@ save(minus.exon.pro, plus.exon.pro, plus.exon.aag.pro, plus.exon.cag.pro, plus.e
 load('~/Core_PRO/exon.pro.Rdata')
 ```
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_RNA_Polymerase_signals_Exon_Raw_exon.jpg" style="mainfig" onclick="document.getElementById('modal08').style.display='block'">
+<figure>
+    <img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_RNA_Polymerase_signals_Exon_Raw_exon.jpg" style="mainfig" onclick="document.getElementById('modal08').style.display='block'">
+    <figcaption>
+    Figure 8: We observe a sharp skipe in position -3 only at CAG 3’ splice sites. This indicates that cytosine is preferentially incorporated during the run-on or preferentially ligated.
+    </figcaption>
+</figure>
 
 <div id="modal08" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
@@ -264,7 +269,13 @@ load('~/Core_PRO/exon.pro.Rdata')
     </div>
 </div>
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_RNA_Polymerase_signals_Exon_Corrected_exon.jpg" style="mainfig" onclick="document.getElementById('modal09').style.display='block'">
+<figure>
+    <img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_RNA_Polymerase_signals_Exon_Corrected_exon.jpg" style="mainfig" onclick="document.getElementById('modal09').style.display='block'">
+    <figcaption>
+    Figure 9: We examined the composite profiles at corrected CAG and TAG splice acceptor sites and we observe that RNA polymerase density is higher following CAG splice acceptor sites, which indicates that the Polymerase proceeds into teh exon more slowly following a CAG splice acceptor site.
+    </figcaption>
+</figure>
+
 <div id="modal09" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
@@ -275,7 +286,13 @@ load('~/Core_PRO/exon.pro.Rdata')
     </div>
 </div>
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/seqOutBias_Figure6.jpg" style="mainfig" onclick="document.getElementById('modal10').style.display='block'">
+<figure>
+    <img src="{{site.url}}/{{site.baseurl}}/assets/images/seqOutBias_Figure6.jpg" style="mainfig" onclick="document.getElementById('modal10').style.display='block'">
+    <figcaption>
+    Figure 10: Upon correcting for enzymatic sequence bias, the signature at the 3’ splice site is abrogated. The first base of the exon spans position 0-1 on the x-axis. The position -3 upstream from the exon start results from T4 RNA ligase sequence bias and this sequence bias is corrected by <code>seqOutBias</code>.
+    </figcaption>
+</figure>
+
 <div id="modal10" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
@@ -344,7 +361,13 @@ composites.func(ctcf.df, fact= "Experimental", summit= "CTCF motif",num = 24,
     fill.poly = rev(c(rgb(0,0,1,1/4), rgb(0,0,0,1/4))))
 ```
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_Experimental_signals_CTCF_motif_peaks.jpg" style="mainfig" onclick="document.getElementById('modal11').style.display='block'">
+<figure>
+    <img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_Experimental_signals_CTCF_motif_peaks.jpg" style="mainfig" onclick="document.getElementById('modal11').style.display='block'">
+    <figcaption>
+    Figure 11: Upon correcting for enzymatic sequence bias, the signature at the site of CTCF binding is abrogated in each molecular genomics data set we tested. However, in cases of CTCF binding to chromatin, we observe protection that results in a footprint; note that MNase is not expected to result in a composite footprint. We observe the previously characterized sharp peak upstream of the CTCF motif; this signature is likely caused by CTCF-mediated enhancement of cleavage activity. This upstream peak signature and the ATAC footprint is less pronounced than previously reported (Buenrostro <em>et al.</em>, 2013).
+    </figcaption>
+</figure>
+
 <div id="modal11" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">

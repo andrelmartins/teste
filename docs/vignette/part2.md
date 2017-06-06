@@ -16,18 +16,15 @@ The specificity of DNase is strongly influenced by the three bases that flank ea
 site (Figure 1) (He *et al.*, 2014; Yardımcı *et al.*, 2014).
 
 <figure>
-
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase_cut_preference.jpg" style="mainfig" onclick="document.getElementById('modal01').style.display='block'">
-<figcaption>Fig 1 la la la la</figcaption>
-
+  <img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase_cut_preference.jpg" style="mainfig" onclick="document.getElementById('modal01').style.display='block'">
+  <figcaption>Figure 1: The six base pair window centered on the DNase nick dictates cleavage preference. (He <em>et al.</em>, 2014)</figcaption>
 </figure>
 
   <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
       <img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase_cut_preference.jpg" style="width:100%">
-      <div class="w3-modal-caption">Figure 1: The six base pair window centered on the DNase nick dictates cleavage preference. (He <em>et al.</em>,
-2014)</div>
+      <div class="w3-modal-caption">Figure 1: The six base pair window centered on the DNase nick dictates cleavage preference. (He <em>et al.</em>, 2014)</div>
     </div>
   </div>
 
@@ -54,9 +51,12 @@ bam=IMR90_Naked_DNase.bam
 `seqOutBias` hg38.fa $bam --kmer-size=10 --bw=Naked_10-mer.bigWig --plus-offset=5 --minus-offset=5 --shift-counts --skip-bed
 ```
 
-
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/cut_site_definition.jpg" style="mainfig" onclick="document.getElementById('modal02').style.display='block'">
-
+<figure>
+  <img src="{{site.url}}/{{site.baseurl}}/assets/images/cut_site_definition.jpg" style="mainfig" onclick="document.getElementById('modal02').style.display='block'">
+  <figcaption>
+  Figure 2: DNase nicking occurs as marked between the two centered base pairs. DNase’s specificity is conferred by the hexamer sequence centered (red block) on the nick sites (dotted vertical lines); this parameter is referred to as the <code>k-mer</code>. For the purposes of this illustration, the two nicks that result in liberation of the DNA ends are in line. We explore the scenarios where the nicks are offset and result in overhangs in Section 8. The <code>plus-offset</code> and <code>minus-offset</code> specify the nick site relative to the first position and last position of the <code>k-mer</code>. During the library preparation, we assume that the plus and minus strand are equally likely to be sequenced (either red nucleotide will be the first base sequenced). This assumption, however, is not true and the DNA end-repair and ligation have inherent biases. As opposed to specifying the immediate upstream base for the minus strand, we arbitrarily shift the base position by +1 to match the position of the immediate upstream base from the plus aligned read; note that the actual shift amounts will differ depending on the relative positions dictated by the plus/minus-offset values.
+  </figcaption>
+</figure>
   <div id="modal02" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
@@ -91,7 +91,12 @@ mv MCF7*bigWig MCF7
 
 Use the [UCSC browser](https://genome.ucsc.edu) to visualize the normalized and unnormalized files (Karolchik *et al.*, 2014). Click *Genomes* in the upper left corner (Figure 3). Make sure you have the correct assembly, we are using *hg38*. Next click *add custom tracks* (Figure 4). Use the GUI to navigate to the **.bedGraph.gz* file-containing directory and upload each file individually. You will want to register and save sessions and you will only need to upload the data once.
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/UCSC_Genome_Browser_Home.jpg" style="mainfig" onclick="document.getElementById('modal03').style.display='block'">
+<figure>
+  <img src="{{site.url}}/{{site.baseurl}}/assets/images/UCSC_Genome_Browser_Home.jpg" style="mainfig" onclick="document.getElementById('modal03').style.display='block'">
+  <figcaption>
+  Figure 3: The <a href="https://genome.ucsc.edu">UCSC homepage</a>.
+  </figcaption>
+</figure>
 
 <div id="modal03" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
@@ -103,8 +108,12 @@ Use the [UCSC browser](https://genome.ucsc.edu) to visualize the normalized and 
     </div>
 </div>
 
-
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/Human-browser_export.jpg" style="mainfig" onclick="document.getElementById('modal04').style.display='block'">
+<figure>
+  <img src="{{site.url}}/{{site.baseurl}}/assets/images/Human-browser_export.jpg" style="mainfig" onclick="document.getElementById('modal04').style.display='block'">
+  <figcaption>
+  Figure 4: Below the browser, click the **add custom tracks** icon.
+  </figcaption>
+</figure>
 
 <div id="modal04" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
@@ -116,9 +125,14 @@ Use the [UCSC browser](https://genome.ucsc.edu) to visualize the normalized and 
     </div>
 </div>
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/ucsc_snr_DNase.jpg" style="mainfig" onclick="document.getElementById('modal04').style.display='block'">
+<figure>
+  <img src="{{site.url}}/{{site.baseurl}}/assets/images/ucsc_snr_DNase.jpg" style="mainfig" onclick="document.getElementById('modal05').style.display='block'">
+  <figcaption>
+  Figure 5: Note that each bar is scaled inversely with DNase sequence preference.
+  </figcaption>
+</figure>
 
-<div id="modal04" class="w3-modal" onclick="this.style.display='none'">
+<div id="modal05" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
       <img src="{{site.url}}/{{site.baseurl}}/assets/images/ucsc_snr_DNase.jpg" style="width:100%">
@@ -201,7 +215,8 @@ do
 done
 ```
 
-Use R to plot composite DNase profiles at TF binding sites
+# Use `R` to plot composite DNase profiles at TF binding sites
+
 First you need to install the [bigWig library](https://github.com/andrelmartins/bigWig) from André Martins. The lattice and latticeExtra libraries can be installed from the CRAN repository. Recall we process the Naked DNA DNase-seq and conventional DNase-seq separately and the input motifs are distinct for each.
 
 ```r
@@ -220,3 +235,37 @@ fact= "Naked DNase", summit= "Motif",num = 24, col.lines = c(rgb(0,0,1,1/2), rgb
 
 save(all.composites.dnase.naked, all.composites.dnase.mcf7, '~/DNase_ENCODE/MCF7_composites.Rdata')
 ```
+
+<figure>
+  <img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_Naked_DNase_signals_Motif_peaks_using.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal06').style.display='block'">
+  <figcaption>
+  Figure 6: The DNase nick bias is abrogated in an deproteinized DNA (Naked) DNase experiment (Lazarovici <em>et al.</em>, 2013) as illustrated by these composite profiles of DNase cut-frequency for three distinct transcription factor motifs.
+  </figcaption>
+</figure>
+
+<div id="modal06" class="w3-modal" onclick="this.style.display='none'">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  <div class="w3-modal-content w3-animate-zoom">
+    <img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_Naked_DNase_signals_Motif_peaks_using.jpg" style="width:100%">
+    <div class="w3-modal-caption">
+      Figure 6: The DNase nick bias is abrogated in an deproteinized DNA (Naked) DNase experiment (Lazarovici <em>et al.</em>, 2013) as illustrated by these composite profiles of DNase cut-frequency for three distinct transcription factor motifs.
+    </div>
+  </div>
+</div>
+
+<figure>
+  <img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_MCF7_DNase_signals_Motif_peaks_using.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal07').style.display='block'">
+  <figcaption>
+  Figure 7: Upon correcting for DNase nick bias, we observe true signatures that may be a result of TF/protein interactions, which we do not observe with the Naked DNase composites. Note the sharp peak upstream of the GATA3 motif; this sharp signature peak is one base-pair downstream (position x = -5.5) of the broader and less intense signature peak observed in Figure 6 (position x = -6.5). Max exhibits a modest composite footprint, which is caused by protection from DNase activity mediated by TF/protein interaction.
+  </figcaption>
+</figure>
+
+<div id="modal07" class="w3-modal" onclick="this.style.display='none'">
+  <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
+  <div class="w3-modal-content w3-animate-zoom">
+    <img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_MCF7_DNase_signals_Motif_peaks_using.jpg" style="width:100%">
+    <div class="w3-modal-caption">
+      Figure 7: Upon correcting for DNase nick bias, we observe true signatures that may be a result of TF/protein interactions, which we do not observe with the Naked DNase composites. Note the sharp peak upstream of the GATA3 motif; this sharp signature peak is one base-pair downstream (position x = -5.5) of the broader and less intense signature peak observed in Figure 6 (position x = -6.5). Max exhibits a modest composite footprint, which is caused by protection from DNase activity mediated by TF/protein interaction.
+    </div>
+  </div>
+</div>

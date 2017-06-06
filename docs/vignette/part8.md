@@ -90,7 +90,13 @@ x.ligation = ligation[with(ligation, order(ratio)), ]
 pswm.func(head(x.ligation[,2], 205), out = 'low_205.txt', positions = 6) pswm.func(tail(x.ligation[,2], 205), out = 'high_205.txt', positions = 6)
 ```
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/ligation_bias_GAC.jpg" style="mainfig" onclick="document.getElementById('modal15').style.display='block'">
+<figure>
+    <img src="{{site.url}}/{{site.baseurl}}/assets/images/ligation_bias_GAC.jpg" style="mainfig" onclick="document.getElementById('modal15').style.display='block'">
+    <figcaption>
+    Figure 15: For all sequence-detected DNase-nicked 6-mers that end in ’GAC’ we compare the ratio of sequence reads that start with ’GAC’ (’<strong>GAC</strong>CAGATGACA’ in Figure 2) to the oppositely oriented 3-mer (’<strong>ATC</strong>ATATCCCGT’ in Figure 2).
+    </figcaption>
+</figure>
+
 <div id="modal15" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
@@ -101,7 +107,13 @@ pswm.func(head(x.ligation[,2], 205), out = 'low_205.txt', positions = 6) pswm.fu
     </div>
 </div>
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/lig_bias_matrix.jpg" style="mainfig" onclick="document.getElementById('modal16').style.display='block'">
+<figure>
+    <img src="{{site.url}}/{{site.baseurl}}/assets/images/lig_bias_matrix.jpg" style="mainfig" onclick="document.getElementById('modal16').style.display='block'">
+    <figcaption>
+    Figure 16: The relative bias of all 3-mers sequenced (the ratio of x-axis 3-mer to y-axis 3-mer). This bias results from enzymatic end repair and ligation sequence preference during the library preparation.
+    </figcaption>
+</figure>
+
 <div id="modal16" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
@@ -112,7 +124,13 @@ pswm.func(head(x.ligation[,2], 205), out = 'low_205.txt', positions = 6) pswm.fu
     </div>
 </div>
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/avg_ligation_bias.jpg" class="mainfig" onclick="document.getElementById('modal17').style.display='block'">
+<figure>
+    <img src="{{site.url}}/{{site.baseurl}}/assets/images/avg_ligation_bias.jpg" class="mainfig" onclick="document.getElementById('modal17').style.display='block'">
+    <figcaption>
+    Figure 17: The ligation preference for each 3-mer relative to all 64 3-mers shows that ’AAT’ is the most preferred 3-mer relative to all others and ’TAG’ is least preferred. Note that this bar chart is the average of the exponentiation of each column in Figure 16.
+    </figcaption>
+</figure>
+
 <div id="modal17" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
@@ -243,7 +261,13 @@ xyplot(as.numeric(unlist(log(dnase.mcf7.mat, base = 10))) ~ as.numeric(unlist(lo
 dev.off()
 ```
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase_Cyanase_Benzonase_scale.jpg" style="mainfig" onclick="document.getElementById('modal18').style.display='block'">
+<figure>
+    <img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase_Cyanase_Benzonase_scale.jpg" style="mainfig" onclick="document.getElementById('modal18').style.display='block'">
+    <figcaption>
+    Figure 18: These indicate that the enzymatic nick biases, as measured by the seqOutBias scale factor, are correlated between DNase experiments and correlated between Cyanase and Benzonase (Grøntved <em>et al.</em>, 2012). Dr. John Stamatoyannopoulos’ lab generated the MCF7 DNase-seq data (Neph <em>et al.</em>, 2012) and Dr. Gordon Hager’s lab generated the mouse liver data (Grøntved <em>et al.</em>, 2012))
+    </figcaption>
+</figure>
+
 <div id="modal18" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
@@ -254,7 +278,13 @@ dev.off()
     </div>
 </div>
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/lig_bias_matrix_all.jpg" style="mainfig" onclick="document.getElementById('modal19').style.display='block'">
+<figure>
+    <img src="{{site.url}}/{{site.baseurl}}/assets/images/lig_bias_matrix_all.jpg" style="mainfig" onclick="document.getElementById('modal19').style.display='block'">
+    <figcaption>
+    Figure 19: These heatmaps illustrate that the post-nick enzymatic processing biases of DNase are very similar between two labs (MCF7 data from John Stamatoyannopoulos’ lab and mouse liver data is from Gordon Hager’s lab). Likewise, the post-nick biases of Cyanase and Benzonase have similar patterns.
+    </figcaption>
+</figure>
+
 <div id="modal19" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
@@ -265,7 +295,13 @@ dev.off()
     </div>
 </div>
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase_Cyanase_Benzonase_scale.jpg" style="mainfig" onclick="document.getElementById('modal20').style.display='block'">
+<figure>
+    <img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase_Cyanase_Benzonase_scale.jpg" style="mainfig" onclick="document.getElementById('modal20').style.display='block'">
+    <figcaption>
+    Figure 20: This figure plots the values from Figure 19. The post-nick sequence preferences are highly correlated between DNase-seq experiments and between Benzonase and Cyanase experiments, but not between DNase and Benzonase.
+    </figcaption>
+</figure>
+
 <div id="modal20" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">

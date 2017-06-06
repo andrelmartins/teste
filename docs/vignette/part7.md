@@ -80,7 +80,12 @@ dotplot(as.numeric(em.scores.atac) ~ hc.atac.cutmasks,
 dev.off()
 ```
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/ATAC-kmer_optimization.jpg" style="mainfig" onclick="document.getElementById('modal12').style.display='block'">
+<figure>
+    <img src="{{site.url}}/{{site.baseurl}}/assets/images/ATAC-kmer_optimization.jpg" style="mainfig" onclick="document.getElementById('modal12').style.display='block'">
+    <figcaption>
+    Figure 12: For each set of TF PSWMs we sum the intensity of signal at each position, then we take the standard deviation between positions. The final metric is a sum of these standard deviations. We chose to use the top 8 positions for the mask.
+    </figcaption>
+</figure>
 <div id="modal12" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
@@ -184,7 +189,13 @@ dotplot(c(as.numeric(tmp2), as.numeric(em.scores.dnase)) ~ c(' uncorrected',' NC
 dev.off()
 ```
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase-IC-kmer_EM.jpg" style="mainfig" onclick="document.getElementById('modal13').style.display='block'">
+<figure>
+    <img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase-IC-kmer_EM.jpg" style="mainfig" onclick="document.getElementById('modal13').style.display='block'">
+    <figcaption>
+    Figure 13: The positions directly flanking the DNase nick site have the most sequence information content and IC decreases moving away from the nick site.
+    </figcaption>
+</figure>
+
 <div id="modal13" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
@@ -195,7 +206,13 @@ dev.off()
     </div>
 </div>
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase-kmer_optimization.jpg" style="mainfig" onclick="document.getElementById('modal14').style.display='block'">
+<figure>
+    <img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase-kmer_optimization.jpg" style="mainfig" onclick="document.getElementById('modal14').style.display='block'">
+    <figcaption>
+    Figure 14: Using the same metric as described in Figure 12, we show that using more than two base on either side of the DNase nick site has minimal added advantage, as previously described (Sung <em>et al.</em>, 2014).
+    </figcaption>
+</figure>
+
 <div id="modal14" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
