@@ -80,7 +80,7 @@ dotplot(as.numeric(em.scores.atac) ~ hc.atac.cutmasks,
 dev.off()
 ```
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/ATAC-kmer_optimization.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal12').style.display='block'">
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/ATAC-kmer_optimization.jpg" style="mainfig" onclick="document.getElementById('modal12').style.display='block'">
 <div id="modal12" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
@@ -184,7 +184,7 @@ dotplot(c(as.numeric(tmp2), as.numeric(em.scores.dnase)) ~ c(' uncorrected',' NC
 dev.off()
 ```
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase-IC-kmer_EM.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal13').style.display='block'">
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase-IC-kmer_EM.jpg" style="mainfig" onclick="document.getElementById('modal13').style.display='block'">
 <div id="modal13" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
@@ -195,7 +195,7 @@ dev.off()
     </div>
 </div>
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase-kmer_optimization.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal14').style.display='block'">
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase-kmer_optimization.jpg" style="mainfig" onclick="document.getElementById('modal14').style.display='block'">
 <div id="modal14" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">

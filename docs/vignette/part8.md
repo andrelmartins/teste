@@ -90,7 +90,7 @@ x.ligation = ligation[with(ligation, order(ratio)), ]
 pswm.func(head(x.ligation[,2], 205), out = 'low_205.txt', positions = 6) pswm.func(tail(x.ligation[,2], 205), out = 'high_205.txt', positions = 6)
 ```
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/ligation_bias_GAC.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal15').style.display='block'">
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/ligation_bias_GAC.jpg" style="mainfig" onclick="document.getElementById('modal15').style.display='block'">
 <div id="modal15" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
@@ -101,7 +101,7 @@ pswm.func(head(x.ligation[,2], 205), out = 'low_205.txt', positions = 6) pswm.fu
     </div>
 </div>
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/lig_bias_matrix.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal16').style.display='block'">
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/lig_bias_matrix.jpg" style="mainfig" onclick="document.getElementById('modal16').style.display='block'">
 <div id="modal16" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
@@ -112,7 +112,7 @@ pswm.func(head(x.ligation[,2], 205), out = 'low_205.txt', positions = 6) pswm.fu
     </div>
 </div>
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/avg_ligation_bias.jpg" style="min-width:100%;min-height:auto;cursor:zoom-in" onclick="document.getElementById('modal17').style.display='block'">
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/avg_ligation_bias.jpg" class="mainfig" onclick="document.getElementById('modal17').style.display='block'">
 <div id="modal17" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
@@ -243,7 +243,7 @@ xyplot(as.numeric(unlist(log(dnase.mcf7.mat, base = 10))) ~ as.numeric(unlist(lo
 dev.off()
 ```
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase_Cyanase_Benzonase_scale.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal18').style.display='block'">
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase_Cyanase_Benzonase_scale.jpg" style="mainfig" onclick="document.getElementById('modal18').style.display='block'">
 <div id="modal18" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
@@ -254,7 +254,7 @@ dev.off()
     </div>
 </div>
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/lig_bias_matrix_all.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal19').style.display='block'">
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/lig_bias_matrix_all.jpg" style="mainfig" onclick="document.getElementById('modal19').style.display='block'">
 <div id="modal19" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
@@ -265,7 +265,7 @@ dev.off()
     </div>
 </div>
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase_Cyanase_Benzonase_scale.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal20').style.display='block'">
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase_Cyanase_Benzonase_scale.jpg" style="mainfig" onclick="document.getElementById('modal20').style.display='block'">
 <div id="modal20" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">

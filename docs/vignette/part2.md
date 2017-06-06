@@ -15,7 +15,7 @@ size, strand-specific offsets, and spaced k-mers.
 The specificity of DNase is strongly influenced by the three bases that flank each side of the DNase cut
 site (Figure 1) (He *et al.*, 2014; Yardımcı *et al.*, 2014).
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase_cut_preference.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal01').style.display='block'">
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/DNase_cut_preference.jpg" style="mainfig" onclick="document.getElementById('modal01').style.display='block'">
 
   <div id="modal01" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
@@ -50,7 +50,7 @@ bam=IMR90_Naked_DNase.bam
 ```
 
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/cut_site_definition.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal02').style.display='block'">
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/cut_site_definition.jpg" style="mainfig" onclick="document.getElementById('modal02').style.display='block'">
 
   <div id="modal02" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
@@ -86,7 +86,7 @@ mv MCF7*bigWig MCF7
 
 Use the [UCSC browser](https://genome.ucsc.edu) to visualize the normalized and unnormalized files (Karolchik *et al.*, 2014). Click *Genomes* in the upper left corner (Figure 3). Make sure you have the correct assembly, we are using *hg38*. Next click *add custom tracks* (Figure 4). Use the GUI to navigate to the **.bedGraph.gz* file-containing directory and upload each file individually. You will want to register and save sessions and you will only need to upload the data once.
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/UCSC_Genome_Browser_Home.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal03').style.display='block'">
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/UCSC_Genome_Browser_Home.jpg" style="mainfig" onclick="document.getElementById('modal03').style.display='block'">
 
 <div id="modal03" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
@@ -99,7 +99,7 @@ Use the [UCSC browser](https://genome.ucsc.edu) to visualize the normalized and 
 </div>
 
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/Human-browser_export.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal04').style.display='block'">
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/Human-browser_export.jpg" style="mainfig" onclick="document.getElementById('modal04').style.display='block'">
 
 <div id="modal04" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
@@ -111,7 +111,7 @@ Use the [UCSC browser](https://genome.ucsc.edu) to visualize the normalized and 
     </div>
 </div>
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/ucsc_snr_DNase.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal04').style.display='block'">
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/ucsc_snr_DNase.jpg" style="mainfig" onclick="document.getElementById('modal04').style.display='block'">
 
 <div id="modal04" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>

@@ -253,7 +253,7 @@ save(minus.exon.pro, plus.exon.pro, plus.exon.aag.pro, plus.exon.cag.pro, plus.e
 load('~/Core_PRO/exon.pro.Rdata')
 ```
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_RNA_Polymerase_signals_Exon_Raw_exon.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal08').style.display='block'">
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_RNA_Polymerase_signals_Exon_Raw_exon.jpg" style="mainfig" onclick="document.getElementById('modal08').style.display='block'">
 
 <div id="modal08" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
@@ -264,7 +264,7 @@ load('~/Core_PRO/exon.pro.Rdata')
     </div>
 </div>
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_RNA_Polymerase_signals_Exon_Corrected_exon.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal09').style.display='block'">
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_RNA_Polymerase_signals_Exon_Corrected_exon.jpg" style="mainfig" onclick="document.getElementById('modal09').style.display='block'">
 <div id="modal09" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
@@ -275,7 +275,7 @@ load('~/Core_PRO/exon.pro.Rdata')
     </div>
 </div>
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/seqOutBias_Figure6.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal10').style.display='block'">
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/seqOutBias_Figure6.jpg" style="mainfig" onclick="document.getElementById('modal10').style.display='block'">
 <div id="modal10" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
@@ -344,7 +344,7 @@ composites.func(ctcf.df, fact= "Experimental", summit= "CTCF motif",num = 24,
     fill.poly = rev(c(rgb(0,0,1,1/4), rgb(0,0,0,1/4))))
 ```
 
-<img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_Experimental_signals_CTCF_motif_peaks.jpg" style="width:30%;cursor:zoom-in" onclick="document.getElementById('modal11').style.display='block'">
+<img src="{{site.url}}/{{site.baseurl}}/assets/images/composite_Experimental_signals_CTCF_motif_peaks.jpg" style="mainfig" onclick="document.getElementById('modal11').style.display='block'">
 <div id="modal11" class="w3-modal" onclick="this.style.display='none'">
     <span class="w3-button w3-hover-red w3-xlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom">
