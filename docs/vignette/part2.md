@@ -1,6 +1,8 @@
 ---
 layout: docs
 title: seqOutBias to generate scaled bigWig files
+prev: part1
+next: part3
 ---
 
 # `seqOutBias` to generate scaled bigWig files
