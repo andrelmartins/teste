@@ -20,13 +20,15 @@
         <header>
           <h1>{{ site.title | default: site.github.repository_name }}</h1>
           <h2>{{ page.title }}</h2>
+        </header>
+        <section id="downloads" class="clearfix">
           {% if page.prev %}
             <a href="{{ page.prev }}.html"  class="button">Previous</a>
           {% endif %}
           {% if page.next %}
             <a href="{{ page.next }}.html"  class="button">Next</a>
           {% endif %}
-        </header>
+        </section>
         <hr>
         <section id="main_content">
           {{ content }}
