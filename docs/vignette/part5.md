@@ -3,7 +3,7 @@ layout: docs
 title: Scaling Tissue Accessible Chromatin (TACh) Benzonase and Cyanase Digested DNA
 prev: part4
 next: part6
-number: 4
+number: 5
 ---
 
 # Scaling Tissue Accessible Chromatin (TACh) Benzonase and Cyanase Digested DNA

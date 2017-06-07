@@ -3,7 +3,7 @@ layout: docs
 title: PRO-seq T4 RNA ligase correction and analysis
 prev: part5
 next: part7
-number: 5
+number: 6
 ---
 
 # PRO-seq T4 RNA ligase correction and analysis

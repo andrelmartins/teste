@@ -3,7 +3,7 @@ layout: docs
 title: Processing of DNase-seq data from ENCODE
 prev: index
 next: part2
-number: 0
+number: 1
 ---
 
 # Processing of DNase-seq data from ENCODE
