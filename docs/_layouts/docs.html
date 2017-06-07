@@ -25,6 +25,9 @@
           {% if page.prev %}
             <a href="{{ page.prev }}.html"  class="button">Previous</a>
           {% endif %}
+          {% if page.number %}
+            <a href="index.html" class="button">Contents</a>
+          {% endif %}
           {% if page.next %}
             <a href="{{ page.next }}.html"  class="button">Next</a>
           {% endif %}

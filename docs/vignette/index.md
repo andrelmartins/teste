@@ -7,7 +7,7 @@ next: part1
 A step-by-step guide to correcting sequence biases resulting from enzymatic sequence preferences
 using `seqOutBias`.
 
-Contents:
+<h2 class="nocount">Contents</h2>
 
 1. [Processing of DNase-seq data from ENCODE](part1.html)
 2. [`seqOutBias` to generate scaled bigWig files](part2.html)
