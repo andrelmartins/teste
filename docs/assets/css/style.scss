@@ -10,14 +10,14 @@ img.mainfig {
 }
 /*
 body {
-    counter-reset: h1counter;
+    counter-reset: cmain;
 }
 */
 
 h1:before {
-    counter-increment: h1counter;
-    content: counter(h1counter) ".\0000a0\0000a0";
-    counter-reset: h2counter;
+    counter-increment: cmain;
+    content: counter(cmain) ".\0000a0\0000a0";
+    counter-reset: csub;
 }
 h1.nocount:before {
     content: none;
@@ -25,8 +25,8 @@ h1.nocount:before {
 }
 
 h2:before {
-    counter-increment: h2counter;
-    content: counter(h1counter) "." counter(h2counter) ".\0000a0\0000a0";
+    counter-increment: csub;
+    content: counter(cmain) "." counter(csub) ".\0000a0\0000a0";
 }
 
 h2.nocount:before {
