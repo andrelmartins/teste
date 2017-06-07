@@ -1,6 +1,8 @@
 ---
 layout: docs
 title: PRO-seq T4 RNA ligase correction and analysis
+prev: part5
+next: part7
 ---
 
 # PRO-seq T4 RNA ligase correction and analysis

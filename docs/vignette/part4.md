@@ -1,6 +1,8 @@
 ---
 layout: docs
 title: Correction of MNase sequence bias from MNase-seq data
+prev: part3
+next: part5
 ---
 
 # Correction of MNase sequence bias from MNase-seq data

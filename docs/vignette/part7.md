@@ -1,6 +1,8 @@
 ---
 layout: docs
 title: k-mer mask optimization
+prev: part6
+next: part8
 ---
 
 # k-mer mask optimization
