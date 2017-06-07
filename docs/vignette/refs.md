@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: References
+prev: part8
 ---
 
 # References

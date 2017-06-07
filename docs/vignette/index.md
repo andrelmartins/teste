@@ -1,6 +1,7 @@
 ---
 layout: docs
 title: seqOutBias vignette
+next: part1
 ---
 
 A step-by-step guide to correcting sequence biases resulting from enzymatic sequence preferences

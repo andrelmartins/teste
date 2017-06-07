@@ -1,6 +1,8 @@
 ---
 layout: docs
 title: Processing of DNase-seq data from ENCODE
+prev: index
+next: part2
 ---
 
 <div id="sidebar">
