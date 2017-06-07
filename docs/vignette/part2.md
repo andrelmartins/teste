@@ -218,7 +218,7 @@ do
 done
 ```
 
-# Use `R` to plot composite DNase profiles at TF binding sites
+## Use `R` to plot composite DNase profiles at TF binding sites
 
 First you need to install the [bigWig library](https://github.com/andrelmartins/bigWig) from André Martins. The lattice and latticeExtra libraries can be installed from the CRAN repository. Recall we process the Naked DNA DNase-seq and conventional DNase-seq separately and the input motifs are distinct for each.
 
