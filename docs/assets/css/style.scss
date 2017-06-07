@@ -14,10 +14,17 @@ body {
 }
 */
 
-h1:before {
+h1 {
     counter-increment: cmain;
-    content: counter(cmain) ".\0000a0\0000a0";
     counter-reset: csub;
+}
+
+h2 {
+    counter-increment: csub;
+}
+
+h1:before {
+    content: counter(cmain) ".\0000a0\0000a0";
 }
 h1.nocount:before {
     content: none;
@@ -25,7 +32,6 @@ h1.nocount:before {
 }
 
 h2:before {
-    counter-increment: csub;
     content: counter(cmain) "." counter(csub) ".\0000a0\0000a0";
 }
 
