@@ -13,13 +13,13 @@
     <title>{{ site.title | default: site.github.repository_name }}</title>
   </head>
 
-  <body>
+  <body style="counter-reset: h1counter {{ page.number }};">
     <div id="container">
       <div class="inner">
 
         <header>
-          <h1>{{ site.title | default: site.github.repository_name }}</h1>
-          <h2>{{ page.title }}</h2>
+          <h1 class="nocount">{{ site.title | default: site.github.repository_name }}</h1>
+          <h2 class="nocount">{{ page.title }}</h2>
         </header>
         <section id="downloads" class="clearfix">
           {% if page.prev %}

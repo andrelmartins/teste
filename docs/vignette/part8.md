@@ -3,6 +3,7 @@ layout: docs
 title: Characterizing the enzymatic clean up and ligation sequence bias
 prev: part7
 next: refs
+number: 7
 ---
 
 # Characterizing the enzymatic clean up and ligation sequence bias

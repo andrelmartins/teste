@@ -3,6 +3,7 @@ layout: docs
 title: Correction of Tn5 sequence bias from ATAC-seq data
 prev: part2
 next: part4
+number: 2
 ---
 
 # Correction of Tn5 sequence bias from ATAC-seq data

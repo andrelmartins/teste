@@ -8,30 +8,27 @@ img.mainfig {
     min-height: auto;
     cursor: zoom-in;
 }
-
+/*
 body {
+    counter-reset: h1counter;
+}
+*/
+
+h1:before {
+    content: counter(h1counter) ".\0000a0\0000a0";
+    counter-increment: h1counter;
     counter-reset: h2counter;
 }
-
-h1 {
-    counter-reset: h2counter;
-}
-
-h2:before {
-    content: counter(h2counter) ".\0000a0\0000a0";
-    counter-increment: h2counter;
-    counter-reset: h3counter;
-}
-h2.nocount:before {
+h1.nocount:before {
     content: none;
     counter-increment: none;
 }
 
-h3:before {
-    content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
-    counter-increment: h3counter;
+h2:before {
+    content: counter(h1counter) "." counter(h2counter) ".\0000a0\0000a0";
+    counter-increment: h2counter;
 }
-h3.nocount:before {
+h2.nocount:before {
     content: none;
     counter-increment: none;
 }
